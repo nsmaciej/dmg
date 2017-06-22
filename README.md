@@ -3,6 +3,8 @@
 Simple attaching/detaching of macOS disk images.
 
 [![Build Status](https://travis-ci.org/mgoszcz2/dmg.svg?branch=master)](https://travis-ci.org/mgoszcz2/dmg)
+[![crates.io](https://img.shields.io/crates/v/dmg.svg)](https://crates.io/crates/dmg)
+[![Docs](https://docs.rs/dmg/badge.svg)](https://docs.rs/dmg)
 
 ## Example
 
