@@ -2,6 +2,8 @@
 
 Simple attaching/detaching of macOS disk images.
 
+[![Build Status](https://travis-ci.org/mgoszcz2/dmg.svg?branch=master)](https://travis-ci.org/mgoszcz2/dmg)
+
 ## Example
 
 Attach a disk image until dropped:
@@ -36,7 +38,7 @@ For more examples see [`src/tests.rs`][1] and [`src/bin/demo.rs`][2]
 
 ## Testing
 
-To re-create (Test.dmg)[Test.dmg] run:
+To create `Test.dmg` run:
 
 ```bash
 ./create_dmg.sh
