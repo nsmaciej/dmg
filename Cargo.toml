@@ -1,0 +1,15 @@
+[package]
+name = "dmg"
+version = "0.1.0"
+license = "MIT OR Apache-2.0"
+authors = ["Maciej Goszczycki <mgoszcz2@gmail.com>"]
+
+[dependencies]
+plist = { version = "0.2.2", default-features = false }
+log = "0.3.8"
+
+[dev-dependencies]
+env_logger = "0.4.3"
+
+[[bin]]
+name = "demo"
