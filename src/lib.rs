@@ -42,17 +42,14 @@
 //! [1]: https://github.com/mgoszcz2/dmg/blob/master/src/tests.rs
 //! [2]: https://github.com/mgoszcz2/dmg/blob/master/src/bin/demo.rs
 
-extern crate plist;
-#[macro_use]
-extern crate log;
-
 use std::path::{Path, PathBuf};
 use std::process::{Command, Stdio};
 use std::io::{self, ErrorKind, Cursor};
 use std::ops::Deref;
 use std::env;
 
-use plist::Plist;
+use log::info;
+use plist::Value;
 
 #[cfg(test)]
 mod tests;
@@ -225,7 +222,7 @@ impl Attach {
             return Err(io::Error::new(ErrorKind::Other, "hdiutil failed"));
         }
 
-        if let Ok(plist) = Plist::read(Cursor::new(output.stdout)) {
+        if let Ok(plist) = Value::from_reader(Cursor::new(output.stdout)) {
             let entities = check!(check!(check!(plist.as_dictionary()).get("system-entities")).as_array());
             for entity in entities {
                 let properties = check!(entity.as_dictionary());
