@@ -5,8 +5,6 @@
 // http://opensource.org/licenses/MIT>, at your option. This file may not be
 // copied, modified, or distributed except according to those terms.
 
-extern crate env_logger;
-
 use std::fs::File;
 
 use super::*;
@@ -17,7 +15,7 @@ const ERRRNO_EROFS: i32 = 30;
 
 macro_rules! logger {
     () => {
-        let _ =env_logger::init();
+        let _ = env_logger::builder().is_test(true).try_init();
     }
 }
 

@@ -1,6 +1,7 @@
 [package]
 name = "dmg"
 version = "0.1.1"
+edition = "2021"
 license = "MIT/Apache-2.0"
 authors = ["Maciej Goszczycki <mgoszcz2@gmail.com>"]
 readme = "README.md"
@@ -11,11 +12,11 @@ documentation = "https://docs.rs/dmg/"
 keywords = ["dmg", "file", "mount", "osx"]
 
 [dependencies]
-plist = { version = "0.2.2", default-features = false }
-log = "0.3.8"
+plist = { version = "1.3.1", default-features = false }
+log = "0.4.17"
 
 [dev-dependencies]
-env_logger = "0.4.3"
+env_logger = "0.10.0"
 
 [[bin]]
 name = "demo"
