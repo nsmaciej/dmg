@@ -1,19 +1,20 @@
 [package]
 name = "dmg"
-version = "0.1.2"
+version = "0.2.0"
 edition = "2021"
 license = "MIT/Apache-2.0"
-authors = ["Maciej Goszczycki <mgoszcz2@gmail.com>"]
+authors = ["Maciej Goszczycki <hi@maciej.ie>"]
 readme = "README.md"
-description = "Simple attaching/detaching of macOS disk images"
-repository = "https://github.com/mgoszcz2/dmg"
-homepage = "https://github.com/mgoszcz2/dmg"
+description = "Simple attaching, detaching, and creation of macOS disk images"
+repository = "https://github.com/maciej-irl/dmg"
+homepage = "https://github.com/maciej-irl/dmg"
 documentation = "https://docs.rs/dmg/"
-keywords = ["dmg", "file", "mount", "osx"]
+keywords = ["dmg", "file", "mount", "osx", "mac", "macos"]
 
 [dependencies]
 plist = { version = "1.3.1", default-features = false }
 log = "0.4.17"
+tempfile = "3"
 
 [dev-dependencies]
 env_logger = "0.10.0"
